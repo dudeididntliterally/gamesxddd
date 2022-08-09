@@ -1,4 +1,4 @@
---Tower Of Misery
+--Tower Of Misery Different UI
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
 local Window = Library.CreateLib("Tower Of Misery", "DarkTheme")
