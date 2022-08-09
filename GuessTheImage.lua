@@ -11,7 +11,7 @@ local Section = MainTab:AddSection({
 
 local workspace = game:GetService("Workspace")
 
-Tab:AddButton({
+MainTab:AddButton({
 	Name = "Get Badges",
 	Callback = function()
 for i,v in pairs(workspace:GetDescendants()) do
