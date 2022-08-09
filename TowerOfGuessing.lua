@@ -1,10 +1,16 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
-local Window = Library.CreateLib("Tower Of Guessing", "DarkTheme")
-local HomeWindow = Window:NewTab("Home")
-local Home = HomeWindow:NewSection("Home Section")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local MainWindow = OrionLib:MakeWindow({Name = "Tower Of Guessing", HidePremium = false, SaveConfig = true, ConfigFolder = "TowerOfGuessing.lua"})
+local MainTab = MainWindow:MakeTab({
+	Name = "Home",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = MainTab:AddSection({
+	Name = "Section"
+})
 
-local workspace = game:GetService("Workspace")
-
-Home:NewButton("Get All Badges", "Home", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-479.921051, 4369.55518, 365.876068)
-end)
+MainTab:AddButton({
+Name = "Get All Badges",
+Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-462.151398, 4369.55518, 364.999878)
+end})
