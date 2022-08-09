@@ -6,7 +6,7 @@ local MainTab = MainWindow:MakeTab({
 	PremiumOnly = false
 })
 local Section = MainTab:AddSection({
-	Name = "Section"
+	Name = "Main"
 })
 
 local workspace = game:GetService("Workspace")
