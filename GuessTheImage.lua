@@ -1,7 +1,13 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
-local Window = Library.CreateLib("Guess The Image", "DarkTheme")
-local HomeWindow = Window:NewTab("Home")
-local Home = HomeWindow:NewSection("Home Section")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local MainWindow = OrionLib:MakeWindow({Name = "Guess The Image", HidePremium = false, SaveConfig = true, ConfigFolder = "GuessTheImage.lua"})
+local MainTab = MainWindow:MakeTab({
+	Name = "Home",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = MainTab:AddSection({
+	Name = "Section"
+})
 
 local workspace = game:GetService("Workspace")
 
