@@ -5,8 +5,8 @@ local MainTab = MainWindow:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local Section = MainTab:AddSection({
-	Name = "Section"
+local MainStuff = MainTab:AddSection({
+	Name = "Main"
 })
 
 MainTab:AddButton({
