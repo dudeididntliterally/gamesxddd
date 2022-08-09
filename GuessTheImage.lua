@@ -11,10 +11,12 @@ local Section = MainTab:AddSection({
 
 local workspace = game:GetService("Workspace")
 
-Home:NewButton("Get All Badges", "Home", function()
+Tab:AddButton({
+	Name = "Get Badges",
+	Callback = function()
 for i,v in pairs(workspace:GetDescendants()) do
     if v.Name == "Part" then
         firetouchinterest(v, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
     end
 end
-end)
+end})
