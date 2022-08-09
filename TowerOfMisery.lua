@@ -7,12 +7,14 @@ local OtherWindow = Window:NewTab("Other")
 local TeleportWindow = Window:NewTab("Teleport")
 local AntiCheatWindow = Window:NewTab("Anti Cheat")
 local FunWindow = Window:NewTab("Fun")
+local GoBackWindow = Window:NewTab("Go Back")
 local SpecialWindow = Window:NewTab("Special")
 local Home = HomeWindow:NewSection("Home Section")
 local OtherStuff = OtherWindow:NewSection("OtherStuff")
 local Teleport = TeleportWindow:NewSection("Teleports")
 local AntiCheat = AntiCheatWindow:NewSection("AntiCheat")
 local Fun = FunWindow:NewSection("Fun Stuff")
+local GoBack = GoBackWindow:NewSection("Go Back")
 
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer
@@ -535,4 +537,8 @@ end
 
 Teleport:NewButton("Turn Off AFK Farm", "Teleport", function()
 _G.afkfarm = false
+end)
+
+GoBack:NewButton("Go Back To Game Picker", "Go Back", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dudeididntliterally/GamePickerMain/main/GamePicker.lua"))()
 end)
